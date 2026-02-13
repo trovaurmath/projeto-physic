@@ -1,0 +1,2 @@
+[console_scripts]
+sensor-ts-kit = sensor_ts_kit.cli:main
