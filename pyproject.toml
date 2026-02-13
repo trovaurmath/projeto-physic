@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sensor-ts-kit"
+version = "0.1.0"
+description = "Kit profissional para analise de series temporais de sensores industriais e embarcados."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Projeto Physic Team" }
+]
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "scipy>=1.10"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0"
+]
+
+[project.scripts]
+sensor-ts-kit = "sensor_ts_kit.cli:main"
+
+[tool.setuptools]
+packages = ["sensor_ts_kit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
